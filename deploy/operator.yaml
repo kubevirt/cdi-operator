@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdi-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: cdi-operator
+  template:
+    metadata:
+      labels:
+        name: cdi-operator
+    spec:
+      containers:
+        - name: cdi-operator
+          image: REPLACE_IMAGE
+          ports:
+          - containerPort: 60000
+            name: metrics
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: OPERATOR_NAME
+              value: "cdi-operator"
