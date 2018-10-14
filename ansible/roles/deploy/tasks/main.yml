@@ -1,0 +1,11 @@
+---
+- name: Check if namespace {{ cdi_namespace }} exists
+  shell: kubectl get ns | grep -w {{ cdi_namespace }} | awk '{ print $1 }'
+  register: ns
+
+- name: Initial setup tasks
+  include_tasks: setup.yaml
+  when: ns.stdout != cdi_namespace
+
+- name: Reconcile state
+  include_tasks: reconcile.yaml
