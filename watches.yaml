@@ -2,4 +2,4 @@
 - version: v1alpha1
   group: cache.example.com
   kind: CDI
-  role: /opt/ansible/roles/CDI
+  playbook: /opt/ansible/cdi.yaml

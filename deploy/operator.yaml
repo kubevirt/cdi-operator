@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: cdi-operator
-          image: REPLACE_IMAGE
+          image: docker.io/kubevirt/cdi-operator:latest
           ports:
           - containerPort: 60000
             name: metrics
