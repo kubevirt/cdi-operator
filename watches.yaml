@@ -1,5 +1,5 @@
 ---
 - version: v1alpha1
-  group: cache.example.com
+  group: cdi.kubevirt.io
   kind: CDI
   playbook: /opt/ansible/cdi.yaml

@@ -30,6 +30,25 @@ undeploy:
 	kubectl delete -f deploy/rbac.yaml --ignore-not-found
 
 ##############
+# CR        #
+##############
+
+cr:
+	# Temporary Hack: Need to fix rbac
+	oc adm policy add-cluster-role-to-user -z cdi-operator cluster-admin
+	oc create -f deploy/cr.yaml
+
+##############
+# OLM        #
+##############
+
+olm:
+	oc create -f cdi-operator-configmap.yaml -f cdi-catalog-source.yaml
+
+rm-olm:
+	oc delete -f cdi-operator-configmap.yaml -f cdi-catalog-source.yaml
+
+##############
 # Build      #
 ##############
 
@@ -39,4 +58,4 @@ build:
 push:
 	docker push $(REPO):$(TAG)
 
-.PHONY:  build push undeploy deploy
+.PHONY:  build push undeploy deploy olm rm-olm cr
