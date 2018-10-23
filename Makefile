@@ -2,6 +2,7 @@ SHELL=/bin/bash -o pipefail
 
 REPO?=docker.io/kubevirt/cdi-operator
 TAG?=latest
+ROLE_DIR?=ansible
 
 ##############
 # Deploy     #
@@ -33,10 +34,13 @@ undeploy:
 # Build      #
 ##############
 
-build:
+role:
+	$(MAKE) -C $(ROLE_DIR)
+
+build: role
 	docker build -t $(REPO):$(TAG) -f Dockerfile .
 
 push:
 	docker push $(REPO):$(TAG)
 
-.PHONY:  build push undeploy deploy
+.PHONY:  role build push undeploy deploy
