@@ -2,4 +2,4 @@
 - hosts: localhost
   tasks:
     - import_role:
-       name: deploy
+       name: cdi
