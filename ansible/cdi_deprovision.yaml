@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  vars:
+    apb_action: deprovision
+  tasks:
+    - import_role:
+       name: cdi

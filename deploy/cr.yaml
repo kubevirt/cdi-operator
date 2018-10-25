@@ -2,5 +2,3 @@ apiVersion: "cache.example.com/v1alpha1"
 kind: "CDI"
 metadata:
   name: "cdi"
-spec:
-  apb_action: provision

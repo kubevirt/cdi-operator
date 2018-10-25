@@ -2,4 +2,7 @@
 - version: v1alpha1
   group: cache.example.com
   kind: CDI
-  playbook: /opt/ansible/cdi.yaml
+  playbook: /opt/ansible/cdi_provision.yaml
+  finalizer:
+    name: finalizer.cache.example.com
+    playbook: /opt/ansible/cdi_deprovision.yaml
