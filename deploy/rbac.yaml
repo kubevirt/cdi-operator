@@ -4,7 +4,7 @@ metadata:
   name: cdi-operator
 rules:
 - apiGroups:
-  - cache.example.com
+  - cdi.kubevirt.io
   resources:
   - "*"
   verbs:

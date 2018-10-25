@@ -1,8 +1,8 @@
 ---
 - version: v1alpha1
-  group: cache.example.com
+  group: cdi.kubevirt.io
   kind: CDI
   playbook: /opt/ansible/cdi_provision.yaml
   finalizer:
-    name: finalizer.cache.example.com
+    name: finalizer.cdi.kubevirt.io
     playbook: /opt/ansible/cdi_deprovision.yaml
