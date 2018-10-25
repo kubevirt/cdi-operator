@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
+  vars:
+    apb_action: provision
   tasks:
     - import_role:
        name: cdi
