@@ -11,6 +11,7 @@ RUN chown -R cdi-operator: /opt/ansible
 USER cdi-operator
 
 COPY ansible/roles/ /opt/ansible/roles/
-COPY ansible/cdi.yaml /opt/ansible/cdi.yaml
+COPY ansible/cdi_provision.yaml /opt/ansible/cdi_provision.yaml
+COPY ansible/cdi_deprovision.yaml /opt/ansible/cdi_deprovision.yaml
 
 COPY watches.yaml /opt/ansible/watches.yaml
