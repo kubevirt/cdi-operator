@@ -1,0 +1,10 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: cdi-operator
+  namespace: openshift-operator-lifecycle-manager
+spec:
+  sourceType: internal
+  configMap: cdi-operator
+  displayName: CDI Operator
+  publisher: Red Hat
