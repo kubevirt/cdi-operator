@@ -17,3 +17,5 @@ Operator that manages CDI (containerized-data-importer)
 ### Check operator logs
 ```oc logs -f $(oc get pods  --selector name=cdi-operator --output=name)```
 
+### Check for CDI related pods in kube-system ns
+```oc get pod -o name --namespace=kube-system | grep cdi```
