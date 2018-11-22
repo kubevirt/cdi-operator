@@ -1,4 +1,5 @@
 ci/wait-pods-ok
+make test
 make build
 make deploy
 # give everything time to come up - PLEASE FIX
