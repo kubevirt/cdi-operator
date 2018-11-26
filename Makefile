@@ -19,7 +19,7 @@ deploy: setprivileges
 	kubectl create -f deploy/crd.yaml
 	kubectl create -f deploy/operator.yaml
 	# Create the operator resource (kubectl get apps)
-	kubectl create -f deploy/cr.yaml
+	# kubectl create -f deploy/cr.yaml - test only, try to have it failing just to see it travis catches it
 
 ##############
 # Undeploy   #
