@@ -44,4 +44,10 @@ build: role
 push:
 	docker push $(REPO):$(TAG)
 
-.PHONY:  role build push undeploy deploy
+##############
+# Tests      #
+##############
+
+test: ;
+
+.PHONY:  role build push undeploy deploy test
