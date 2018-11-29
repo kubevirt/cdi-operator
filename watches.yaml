@@ -4,5 +4,5 @@
   kind: CDI
   playbook: /opt/ansible/cdi_provision.yaml
   finalizer:
-    name: finalizer.cdi.kubevirt.io
     playbook: /opt/ansible/cdi_deprovision.yaml
+    name: finalizer.cdi.kubevirt.io
