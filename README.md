@@ -1,3 +1,5 @@
+**⚠️ This repository is deprecated and no longer maintained.**
+
 # cdi-operator
 Operator that manages CDI (containerized-data-importer)
 
